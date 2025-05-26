@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: green;
+        }
+    
+        .form-container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ff00;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .radio-group {
+      margin-bottom: 15px;
+    }
+
+    .radio-group label {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: normal;
+    }
+
+    .signature-box {
+      border: 2px dashed #aaa;
+      height: 150px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      position: relative;
+    }
+
+    .signature-box::after {
+      content: "Sign here";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .submit-btn {
+      background-color: #00ff00;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #beaf13;
+    }
+
+    #header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        background-color: #188a18;
+    }
+
+    #footer{
+        text-align: center;
+        font-size: large;
+        font-weight: 800;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 15px;
+        color: #f9f9f9;
+    }
+
+    #footer a{
+        text-decoration: none;
+        color: black;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/AAP logo.png" alt="" style="width: 80px; height: auto; border-radius: 50%;">
+        <h1 style="color: white; text-align: center; margin: auto; padding: 15px;">NACOSS PAYMENT ENVIRONMENT</h2>
+    </div>
+        <marquee behavior="" direction="left">
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size:larger; font-weight: 800; color: white; ">Welcome to the payment portal for the National Association of Computer Science AAPOLY chapter</p>
+        </marquee>
+        
+
+        <div class="form-container">
+            <h2>Student Payment Form</h2>
+            <form>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+        
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+        
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+        
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+        
+              <label for="studentId">Student ID</label>
+              <input type="text" id="studentId" name="studentId" required />
+        
+              <label for="course">Course Taken</label>
+              <input type="text" id="course" name="course" required />
+        
+              <label for="year">Year of Study</label>
+              <select id="year" name="year" required>
+                <option value="">--Select Year--</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+        
+              <div class="radio-group">
+                <label>Reason for Payment:</label><br />
+                <label><input type="radio" name="reason" value="Tuition" required /> Tuition</label>
+                <label><input type="radio" name="reason" value="Library" /> Library</label>
+                <label><input type="radio" name="reason" value="Hostel" /> NACOSS Due</label>
+              </div>
+        
+              <div class="radio-group">
+                <label>Payment Method:</label><br />
+                <label><input type="radio" name="paymentMethod" value="Cash" required /> Cash</label>
+                <label><input type="radio" name="paymentMethod" value="Card" /> Card</label>
+                <label><input type="radio" name="paymentMethod" value="Online" /> Online</label>
+              </div>
+        
+              <label>Signature:</label>
+              <div class="signature-box"></div>
+        
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required />
+        
+              <label for="verification">Verification</label>
+              <input type="text" id="verification" name="verification" required />
+        
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+
+          <footer id="footer">&copy; 2025, <a href="#">Tunez Tech</a> | All Rights Reserved.</footer>
+</body>
+<script src="script.js"></script>
+</html>
